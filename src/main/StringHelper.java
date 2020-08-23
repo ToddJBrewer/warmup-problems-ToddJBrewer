@@ -1,4 +1,3 @@
-//test test test
 package main;
 
 /** A class that contains several methods for manipulating strings */
@@ -11,8 +10,14 @@ public class StringHelper {
      * @return the number of vowels
      */
     public static int countVowels(String message) {
-        //TODO: Replace with your code.
-        return 0;
+        int v_counter = 0;
+        for (int i = 0; i < message.length(); i++)
+        {
+            if (message.charAt(i) == 'a' || message.charAt(i) == 'e' || message.charAt(i) == 'i' || message.charAt(i) == 'o' || message.charAt(i) == 'u') {
+                v_counter ++;
+            }
+        }
+        return v_counter;
     }
 
     /**
@@ -35,7 +40,7 @@ public class StringHelper {
      * @author Prof. Rollins
      */
     public static String encrypt(String message, int shift) {
-        //TODO: Replace with your code.
+        for (int i = 0; i < message.length(); i++)
         return null;
     }
 
