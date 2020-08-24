@@ -41,7 +41,20 @@ public class StringHelper {
      */
     public static String encrypt(String message, int shift) {
         for (int i = 0; i < message.length(); i++)
-        return null;
+        cipherchar = message.charAt(i);
+        if (cipherchar>='a' && cipherchar <='z')
+        {
+            cipherchar = (cipherchar + 2);
+        if (cipherchar > 'z')
+        {
+            cipherchar = (ciphercar+'a' - 'z' - 1);}
+        cipherchar = shift;
+        return shift;
+
+
+
+        }
+        }
     }
 
     /** Main method: runs methods of class StringHelper */
