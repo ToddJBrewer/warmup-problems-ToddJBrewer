@@ -40,24 +40,20 @@ public class StringHelper {
      * @author Prof. Rollins
      */
     public static String encrypt(String message, int shift) {
-        for (int i = 0; i < message.length(); i++)
-        cipherchar = message.charAt(i);
-        if (cipherchar>='a' && cipherchar <='z')
-        {
-            cipherchar = (cipherchar + 2);
-        if (cipherchar > 'z')
-        {
-            cipherchar = (ciphercar+'a' - 'z' - 1);}
-        cipherchar = shift;
-        return shift;
+        String cipherstring = "";
+        char c = 'a';
+        for (int i = 0; i < message.length(); i++) {
+        c = (char) (message.charAt(i) + shift);
+        cipherstring += c; }
 
 
-
-        }
-        }
+        return cipherstring;
     }
 
-    /** Main method: runs methods of class StringHelper */
+
+
+
+        /** Main method: runs methods of class StringHelper */
     public static void main(String[] args) {
         String s = "hello";
         System.out.println("Original string: " + s);
