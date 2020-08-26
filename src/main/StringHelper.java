@@ -43,8 +43,22 @@ public class StringHelper {
         String cipherstring = "";
         char c = 'a';
         for (int i = 0; i < message.length(); i++) {
-        c = (char) (message.charAt(i) + shift);
-        cipherstring += c; }
+                c = (char) (message.charAt(i) + shift);
+                if (c <= 'z' && message.charAt(i) >= 'a') {
+                    cipherstring += c;
+                }
+                else if (c > 'z') {
+                    c = (char) (message.charAt(i) - 26 + shift);
+                    cipherstring += c;
+                }
+                else if (c <= 'Z' && message.charAt(i) >= 'A') {
+                    cipherstring += c;
+                }
+                else if (c > 'Z' && c < 'a') {
+                    c = (char) (message.charAt(i) - 26 + shift);
+                    cipherstring += c;
+                }
+        }
 
 
         return cipherstring;
