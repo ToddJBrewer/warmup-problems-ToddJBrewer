@@ -8,8 +8,11 @@ public class MathHelper {
      * @return sum of elements from 1 to n
      */
     public static int arithmeticSeries(int n) {
-        //TODO: Replace with your code.
-        return 0;
+        int total = 0;
+        for (int i = 0; i <= n; i++) {
+            total += i;
+        }
+        return total;
     }
 
 
@@ -23,8 +26,12 @@ public class MathHelper {
      * @return true if these lines segments can form a triangle, and false otherwise
      */
     public static boolean validTriangle(int a, int b, int c) {
-        //TODO: Replace with your code.
-        return false;
+        boolean triangle = false;
+        if (a+b>c || a+c>b || b+c>a) {
+            triangle = true;
+        }
+
+        return triangle;
     }
 
     public static void main(String[] args) {
