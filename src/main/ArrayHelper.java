@@ -10,7 +10,10 @@ public class ArrayHelper {
      * @param arr array of integers
      */
     public static void print(int[] arr) {
-        //TODO: Replace with your code.
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
     }
 
     /** Returns the sum of all elements of the array
@@ -31,8 +34,11 @@ public class ArrayHelper {
      * @return product of all elements
      */
     public static int product(int[] arr) {
-        //TODO: Replace with your code.
-        return 1;
+        int total = 1;
+        for (int i=0; i<arr.length; i++) {
+            total = total*arr[i];
+        }
+        return total;
     }
 
     /**
@@ -43,8 +49,14 @@ public class ArrayHelper {
      * @return
      */
     public static boolean threshold(int[] arr, int thres) {
-        //TODO: Replace with your code.
-        return false;
+        boolean bool_thresh = true;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= thres) {
+                bool_thresh = false;
+            }
+        }
+
+        return bool_thresh;
     }
 
     /** Returns true if elem is present in the array and false otherwise
@@ -56,8 +68,12 @@ public class ArrayHelper {
      * @return
      */
     public static boolean find(int[] arr, int elem) {
-        //TODO: Replace with your code.
-        return false;
+        boolean elem_checker = false;
+        for (int i=0;i<arr.length;i++)
+            if (arr[i] == elem) {
+                elem_checker = true;
+            }
+        return elem_checker;
     }
 
     /** Returns the number of occurrences of elem in the given array.
@@ -67,8 +83,12 @@ public class ArrayHelper {
      * @return
      */
     public static int countOccurrences(int[] arr, int elem) {
-        //TODO: Replace with your code.
-        return 0;
+        int ten_counter = 0;
+        for (int i=0;i<arr.length;i++)
+            if (arr[i] == elem) {
+                ten_counter += 1;
+            }
+        return ten_counter;
     }
 
     /** Returns true if array of integers has duplicate elements,
